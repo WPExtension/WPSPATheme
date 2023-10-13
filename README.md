@@ -2,7 +2,7 @@
 WordPress SPA Theme alternative of MVC Extension of the client wants work inside the theme
 
 ```PHP
-   SPA Folder Structure
+   # SPA Folder Structure
    > Themes
      > YourTheme
        > init
@@ -10,8 +10,17 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
 
 ```
 
+
 ```PHP
-   // functions.php theme file
+   # SPA Installation
+   > Themes
+     > YourTheme
+       > functions.php
+         > require get_theme_file_path() . '/initActions.php';
+```
+
+```PHP
+   # Or in your functions.php theme file
    # Register new action!
        add_action('init', function() { ___initActions('initActions'); });
 
