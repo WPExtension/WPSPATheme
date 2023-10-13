@@ -31,7 +31,7 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
        public $dir;
        public $stype;
 
-      protected function __construct( $___directories,  $sc)
+      public function __construct( $___directories,  $sc)
       {
 
         $this->stype = $sc;
@@ -88,8 +88,8 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
       
         }   
      };     
+     
   }
-
 ```
 
 <h2>Hooks</h2>
