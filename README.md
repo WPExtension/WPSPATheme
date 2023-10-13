@@ -20,7 +20,7 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
      if(!is_null($___directories)) {   
 
       $___spa_directory = get_theme_file_path( 
-           apply_filters( 'init_directory', '/init/' ) . $___directories 
+           apply_filters( 'init_directory', '/init/' ) . $___directories .'/'
       );
 
       $___spaAllRun = new DirectoryIterator( $___spa_directory );  
