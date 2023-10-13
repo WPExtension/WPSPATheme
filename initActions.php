@@ -45,7 +45,7 @@
        public $dir;
        public $stype;
 
-      protected function __construct( $___directories,  $sc)
+      public function __construct( $___directories,  $sc)
       {
 
         $this->stype = $sc;
