@@ -6,7 +6,7 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
    > Themes
      > YourTheme
        > init
-         > initAction
+         > initActions
 
 ```
 
