@@ -13,7 +13,7 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
 ```PHP
     // functions.php theme file
     # Register new action!
-    add_action('init', function() { ___initActions('initAction'); });
+    add_action('init', function() { ___initActions('initActions'); });
 
     function ___initActions( $___directories = null , bool $sc = false ) : void { 
 
@@ -33,7 +33,6 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
    }
 
   }  
- }
 ```
 
 <h2>Hooks</h2>
