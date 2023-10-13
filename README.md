@@ -11,9 +11,9 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
 ```
 
 ```PHP
-    // functions.php theme file
-    # Register new action!
-    add_action('init', function() { ___initActions('initActions'); });
+   // functions.php theme file
+   # Register new action!
+       add_action('init', function() { ___initActions('initActions'); });
 
     function ___initActions( $___directories = null , bool $sc = false ) : void{
 
@@ -22,7 +22,7 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
        public $dir;
        public $stype;
 
-      public function __construct( $___directories,  $sc)
+      protected function __construct( $___directories,  $sc)
       {
 
         $this->stype = $sc;
@@ -30,16 +30,16 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
 
       }
 
-      private function wp_check_default_directory($spa) {
+      protected function wp_check_default_directory($spa) {
          return get_theme_file_path('init/' . $spa);
       }
       
-      private function wp_check_filtered_directory($spa)  {
+      protected function wp_check_filtered_directory($spa)  {
         $filter_init = apply_filters( 'init_directory', "init" );
         return get_theme_file_path($filter_init . "/".$spa."/");
       }
       
-      private function handler_error( $hookDeault = [] ) {
+      protected function handler_error( $hookDeault = [] ) {
         print "<span style='background-color: #F5D9D9; color: #333; '>";
         $container = [];  foreach($hookDeault as $hd) {
           $container[] = "Directory " .$hd."<br />";
@@ -49,7 +49,7 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
 
       }
 
-      protected function wp_check_compare_directory($spa)  {
+      private function wp_check_compare_directory($spa)  {
           
         $hookDeault     = str_replace($spa, "", $this->wp_check_default_directory($spa));
         $hookedFiltired = str_replace($spa, "", $this->wp_check_filtered_directory($spa)); 
