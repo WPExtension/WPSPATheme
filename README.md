@@ -10,6 +10,34 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
 
 ```
 
+```PHP
+   # SPA Folder Custom Structure
+   > Themes
+     > YourTheme
+       > init
+         > initActions /*  ___initActions('initActions'); */
+            > about-title-filter.php
+         > HomePageFilter /*  ___initActions('HomePageFilter'); */ 
+            > home-title-filter.php
+
+  # Sub folder 
+     > YourTheme
+       > init
+         > initActions /* ___initActions('initActions'); */
+            > about-title-filter.php
+            > register /* ___initActions('initActions/register'); */
+               > filter-date.php
+        ...
+
+    add_action('init', function() { 
+
+       ___initActions('initActions');
+       ___initActions('initActions/register'); 
+       ___initActions('HomePageFilter');
+
+   });
+```
+
 
 ```PHP
    # SPA Installation
