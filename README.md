@@ -11,8 +11,7 @@ WordPress SPA Theme alternative of MVC Extension of the client wants work inside
 ```
 
 ```PHP
-  // functions.php theme file
-  # Register new action!
+    // functions.php theme file
     # Register new action!
     add_action('init', function() { ___initActions('initActions'); });
 
