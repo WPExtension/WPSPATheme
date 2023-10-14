@@ -52,7 +52,14 @@ WordPress SPA for Theme adding Hooks and filter working only inside the theme fi
    # Register new action!
     add_action('init', function() { ___initActions('initActions'); });
 
-    function ___initActions( $___directories = null , bool $sc = false ) : void{
+   /* Description: Init Package for storage folder structure for hooks filters and actions
+    * Author: Develop by nielsoffce  
+    * URI : https://github.com/WPExtension/WPSPATheme
+    * @since : 14-Oct-2023 
+   **/
+   if( !function_exists('___initActions') ) {
+
+    function ___initActions( $___directories = null , bool $sc = false ) : void {
 
       $___initActions =  new Class( $___directories , $sc )  {
 
@@ -115,9 +122,10 @@ WordPress SPA for Theme adding Hooks and filter working only inside the theme fi
             }
       
         }   
-     };     
-     
+     };       
   }
+
+ }
 ```
 
 <h2>Hooks</h2>
