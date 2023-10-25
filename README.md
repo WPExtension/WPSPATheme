@@ -111,15 +111,17 @@ WordPress SPA for Theme adding Hooks and filter working only inside the theme fi
         }
       
             $___spaAllRun = new DirectoryIterator( $___spa_directory );  
-            foreach ($___spaAllRun as $appRequest) {  
-                
-              if (!$appRequest->isDot() && $this->stype != true ) {  
-                require ( $___spa_directory . $appRequest->getFilename() ); } 
-              else if (!$appRequest->isDot() && $this->stype == true ) { 
-                require_once( $___spa_directory . $appRequest->getFilename() ); 
-              } 
-
-            }
+      		foreach ($___spaAllRun as $appRequest) {  
+      			
+      			$__filen = preg_replace('/\s+/', '', ($___spa_directory . $appRequest->getFilename()) );
+      
+      			if (!$appRequest->isDot() && $this->stype != true ) {  	 
+      			require ($__filen); } 
+      			else if (!$appRequest->isDot() && $this->stype == true ) { 
+      			require_once($__filen); 
+      			} 
+      
+      		}
       
         }   
      };       
