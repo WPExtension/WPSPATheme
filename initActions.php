@@ -91,14 +91,15 @@
       
             $___spaAllRun = new DirectoryIterator( $___spa_directory );  
             foreach ($___spaAllRun as $appRequest) {  
-                
-              if (!$appRequest->isDot() && $this->stype != true ) {  
-                require ( $___spa_directory . $appRequest->getFilename() ); } 
-              else if (!$appRequest->isDot() && $this->stype == true ) { 
-                require_once( $___spa_directory . $appRequest->getFilename() ); 
-              } 
-
-            }
+      			
+               $__filen = preg_replace('/\s+/', '', ($___spa_directory . $appRequest->getFilename()) );
+               if (!$appRequest->isDot() && $this->stype != true ) {  	 
+               require ($__filen); } 
+               else if (!$appRequest->isDot() && $this->stype == true ) { 
+               require_once($__filen); 
+               } 
+      
+      	   }
       
         }   
      };     
