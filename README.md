@@ -1,4 +1,4 @@
-pli# WPSPATheme for WordPress Theme Development
+WPSPATheme for WordPress Theme Development
 WordPress SPA (Single Page Application) for Theme adding Hooks and filter working only inside the theme file similar to shortcode wp-plugin but raw php file structure
 
 ```PHP
