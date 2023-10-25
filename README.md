@@ -114,8 +114,7 @@ WordPress SPA (Single Page Application) for Theme adding Hooks and filter workin
             foreach ($___spaAllRun as $appRequest) {  
       			
                $__filen = preg_replace('/\s+/', '', ($___spa_directory . $appRequest->getFilename()) );
-               if (!$appRequest->isDot() && $this->stype != true ) {  	 
-               require ($__filen); } 
+               if (!$appRequest->isDot() && $this->stype != true ) { require ($__filen); } 
                else if (!$appRequest->isDot() && $this->stype == true ) { 
                require_once($__filen); 
                } 
